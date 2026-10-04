@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "classes": {"source": ["include/", "docs/", "governance/", "manifest/", "Makefile", "CMakeLists.txt", "tools/", ".github/"], "fixture": ["tests/"], "generated": ["build/"], "external": [".code-constitution/"], "report": []},
+  "generated_policy": "rebuild; never independently edit",
+  "root_metadata": ["README.md", "AGENTS.md", "LICENSE", "THIRD-PARTY-NOTICES.md", ".gitignore", ".gitmodules"]
+}

@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "code_constitution": {"repository": "https://github.com/FOP-Oksana-Dubinetska/code-constitution.git", "commit": "220dc9c286ae06f8b6ed60cdda75112eed0408ed", "path": ".code-constitution", "status": "external"},
+  "toolchain": {"language": "C++20", "verified_compiler": "GCC 13.3.0", "verified_make": "GNU Make 4.3", "verified_python": "3.12.14", "additional_runtime_libraries": []}
+}
