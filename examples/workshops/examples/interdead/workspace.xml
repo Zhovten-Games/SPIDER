@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.interdead" version="1" status="illustrative">
+  <purpose>Connect production sources and build review.</purpose>
+  <contract id="workshop.interdead.boundary">
+    <input>Indexed documents, registered Git sources, project groups and immutable build receipts.</input>
+    <authority>Cloudflare admission plus server editor/operator rights; D1 metadata is separate from provider originals.</authority>
+    <step>Render Project Graph and Document Center from the same stable references.</step>
+    <step>Present verified WASM builds; keep Unreal readiness explicit.</step>
+    <reject>Final publication remains unavailable without a configured destination.</reject>
+  </contract>
+  <test id="workshop.interdead.example" covers="workshop.interdead.boundary">
+    <given>A source is archived.</given>
+    <when>An operator inspects an existing relation.</when>
+    <then>Preserve its identity/evidence and show source availability separately.</then>
+  </test>
+</projection>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.embo" version="1" status="illustrative">
+  <purpose>Project orders without moving payment authority.</purpose>
+  <contract id="workshop.embo.boundary">
+    <input>Authenticated synthetic order events with durable event identity.</input>
+    <authority>The commerce provider owns payment and entitlement decisions.</authority>
+    <step>Deduplicate events and keep one fixed row owner per order.</step>
+    <step>Use a durable export outbox; retries preserve identity and provenance.</step>
+    <step>Import only approved release artifacts with source and content hashes.</step>
+    <reject>Refuse unsigned, conflicting or unapproved inputs.</reject>
+  </contract>
+  <test id="workshop.embo.example" covers="workshop.embo.boundary">
+    <given>A spreadsheet export fails after accepting an event.</given>
+    <when>The bounded retry executes.</when>
+    <then>Export the same order projection without another payment or duplicate row.</then>
+  </test>
+</projection>

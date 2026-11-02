@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.save" version="1" status="illustrative">
+  <purpose>Persist state through a host-owned storage port.</purpose>
+  <contract id="game.save.boundary">
+    <input>Versioned session bytes, content identity and integrity metadata.</input>
+    <authority>The core serializes meaning; the storage adapter owns files or browser storage.</authority>
+    <step>Validate format, content identity and invariants before replacing a session.</step>
+    <commit>Use atomic host storage and keep the previous valid save on failure.</commit>
+    <reject>Migrate explicitly or refuse unknown versions.</reject>
+  </contract>
+  <test id="game.save.example" covers="game.save.boundary">
+    <given>A save belongs to another content revision.</given>
+    <when>The player requests load.</when>
+    <then>Load refuses visibly; the active session is unchanged.</then>
+  </test>
+</projection>

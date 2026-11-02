@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.acceptance" version="1" status="illustrative">
+  <purpose>Distinguish technical checks from product acceptance.</purpose>
+  <contract id="game.acceptance.boundary">
+    <input>Scenario inventory, source revisions, toolchain and actual observations.</input>
+    <step>Run relevant contract blocks and the final integration suite.</step>
+    <step>Record local checks, remote CI and running deployment separately.</step>
+    <reject>A draft narrative or absent tool cannot be reported as accepted.</reject>
+  </contract>
+  <test id="game.acceptance.example" covers="game.acceptance.boundary">
+    <given>All local technical checks pass.</given>
+    <when>The delivery record is written.</when>
+    <then>It claims the measured scope and leaves authorial acceptance explicit.</then>
+  </test>
+</projection>

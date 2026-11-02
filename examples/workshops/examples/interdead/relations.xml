@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.relations" version="1" status="illustrative">
+  <purpose>Translate an explicit instruction into a checked relation package.</purpose>
+  <contract id="workshop.relations.boundary">
+    <input>Stable package ID, base revision, instruction reference and up to fifty explicit operations.</input>
+    <precondition>Resolve document, tab, source and group IDs; never infer links from co-membership.</precondition>
+    <step>Choose semantic type and interface or system exposure for every relation.</step>
+    <step>Preview all changes and prior values, resolve new endpoints and seal a digest.</step>
+    <commit>Apply the checked package in one CAS transaction with one revision, audit and durable receipt.</commit>
+    <reject>Reject ambiguity, changed payload, stale base, unavailable new endpoint or exhausted receipt capacity.</reject>
+  </contract>
+  <test id="workshop.relations.example" covers="workshop.relations.boundary">
+    <given>A package has already been applied and the graph changed later.</given>
+    <when>The same actor retries the exact package.</when>
+    <then>Return its recorded receipt without new effects or a second audit.</then>
+  </test>
+</projection>

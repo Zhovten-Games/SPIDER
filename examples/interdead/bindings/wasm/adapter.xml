@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.wasm" version="1" status="illustrative">
+  <purpose>Expose the same portable command boundary to a browser.</purpose>
+  <contract id="game.wasm.boundary">
+    <input>Validated command envelopes and host-injected ticks.</input>
+    <step>Translate bytes and handles without duplicating gameplay rules.</step>
+    <step>Return permitted player data separately from diagnostics.</step>
+    <invariant>The browser cannot set stress, knowledge or inventory directly.</invariant>
+  </contract>
+  <test id="game.wasm.example" covers="game.wasm.boundary">
+    <given>Native and WASM hosts receive the same scripted commands.</given>
+    <when>Both execute the real core.</when>
+    <then>Compare semantic frames and receipts, independent of layout.</then>
+  </test>
+</projection>

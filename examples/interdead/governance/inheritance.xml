@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.governance" version="1" status="illustrative">
+  <purpose>Translate universal principles into scoped local checks.</purpose>
+  <contract id="game.governance.boundary">
+    <input>Pinned Constitution, local profile and development legislation.</input>
+    <step>Map a rule to its source, scope, implementation and evidence.</step>
+    <step>Record stack overrides rather than forcing one language.</step>
+    <invariant>Technical evidence does not replace human adoption or editorial acceptance.</invariant>
+  </contract>
+  <test id="game.governance.example" covers="game.governance.boundary">
+    <given>The game uses C++ while another consumer uses JavaScript.</given>
+    <when>Each declares its local profile and checks.</when>
+    <then>Both may preserve the method without sharing an implementation language.</then>
+  </test>
+</projection>

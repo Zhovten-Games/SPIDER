@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.warden" version="1" status="illustrative">
+  <purpose>Warden observes the real session.</purpose>
+  <contract id="game.warden.boundary">
+    <input>A versioned fixture, deterministic command sequence and named expectations.</input>
+    <step>Call the same public boundary as player hosts.</step>
+    <step>Group scenarios by contract: core, attention, persistence, projections and delivery.</step>
+    <step>Run affected groups first; run complete integration before main publication.</step>
+    <invariant>Selecting a block does not delete scenarios or weaken historical integrity.</invariant>
+    <reject>Report missing tools as pending, never as a passing skipped test.</reject>
+  </contract>
+  <test id="game.warden.example" covers="game.warden.boundary">
+    <given>A bounded attention block is selected.</given>
+    <when>Warden executes its complete scenario inventory.</when>
+    <then>Report named expected/actual values, inventory and the remaining integration gate.</then>
+  </test>
+</projection>

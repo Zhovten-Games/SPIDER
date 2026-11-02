@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.console" version="1" status="illustrative">
+  <purpose>A readable command-log projection.</purpose>
+  <contract id="game.console.boundary">
+    <input>Permitted transcript, speaker identity, actions and activity status.</input>
+    <step>Print named actors and handles in console form.</step>
+    <step>Separate world speech, activity and phone attention.</step>
+    <invariant>Console layout changes no perception or stress rule.</invariant>
+  </contract>
+  <test id="game.console.example" covers="game.console.boundary">
+    <given>A critical effect overlaps world speech.</given>
+    <when>The console receives the permitted projection.</when>
+    <then>It communicates the effect and speech without replacing session state.</then>
+  </test>
+</projection>

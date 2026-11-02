@@ -1,5 +1,35 @@
 {
   "schema_version": 1,
-  "code_constitution": {"repository": "https://github.com/FOP-Oksana-Dubinetska/code-constitution.git", "commit": "220dc9c286ae06f8b6ed60cdda75112eed0408ed", "path": ".code-constitution", "status": "external"},
-  "toolchain": {"language": "C++20", "verified_compiler": "GCC 13.3.0", "verified_make": "GNU Make 4.3", "verified_python": "3.12.14", "additional_runtime_libraries": []}
+  "constitution": {
+    "repository": "FOP-Oksana-Dubinetska/code-constitution",
+    "commit": "220dc9c286ae06f8b6ed60cdda75112eed0408ed"
+  },
+  "licensing_policy": {
+    "repository": "FOP-Oksana-Dubinetska/repository-licensing-policy",
+    "commit": "6e4c2627717c079827ed4aa9044a5346b3ea3ddb"
+  },
+  "interdead": {
+    "repository": "Zhovten-Games/InterDead",
+    "commit": "dccff60b2aafd8265a4c5dec4c9c0ddbd209e495",
+    "status": "private source inspected, including W03.5 requested-relation extension; original literary reconstruction only",
+    "baseline_commit": "a7a34826f162888d5b8b00d610cfaa0ec1ef7a86"
+  },
+  "embo": {
+    "repository": "EMBO-Studio-develop/embo-workshop",
+    "commit": "60a10aa1393ce89f9b8d5371d78615f1d8f5642e",
+    "status": "read-only reference; no source redistribution"
+  },
+  "vox": {
+    "repository": "IRONCREED/VOX",
+    "commit": "9a79a8fd18133dea4e3f333d6fab7b482610838f",
+    "status": "public semantic-core reference"
+  },
+  "legacy_cpp_consumer_pin": "3c67103c1456f5b1dd5ce88204be658d0bbce3bd",
+  "editorial_basis": {
+    "title": "Custom Operations Workspaces — From Internal Production to Client Infrastructure",
+    "source_type": "owner-supplied Halloween 2026 overview and InterDead/EMBO case texts",
+    "received": "2026-11-02",
+    "clarification": "VOICE means IRONCREED/VOX",
+    "evidence_scope": "October staging described by owner; not rerun by this methodology checker"
+  }
 }

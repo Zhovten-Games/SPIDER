@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.embo.distribution" version="1" status="illustrative">
+  <purpose>Coordinate catalogue, licensing and verified distribution without conflating their states.</purpose>
+  <contract id="workshop.embo.distribution.boundary">
+    <input>A source-pinned release, verified private package, authoritative commerce events and a site identity.</input>
+    <step>Import only approved release bytes with their integrity digest.</step>
+    <step>Expose the catalogue through the operational API; keep payment and entitlement authority with WooCommerce.</step>
+    <step>Require explicit administrator connection and valid entitlement before package delivery.</step>
+    <step>Reconcile cancellation through the operational projection and sheet export.</step>
+    <invariant>Release existence, purchase state, distribution entitlement and local installation are separate objects.</invariant>
+    <reject>Refuse a new download after revocation without silently uninstalling local software.</reject>
+  </contract>
+  <test id="workshop.embo.distribution.example" covers="workshop.embo.distribution.boundary">
+    <given>A synthetic order enabled a verified add-on installation on a test site.</given>
+    <when>The commerce authority cancels the order and reconciliation completes.</when>
+    <then>Deny a new authorized download; preserve the installed plugin and record the cancellation projection.</then>
+  </test>
+</projection>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.artifacts" version="1" status="illustrative">
+  <purpose>Classify artifacts before distributing them.</purpose>
+  <contract id="game.artifacts.boundary">
+    <input>Sources, fixtures, generated definitions, external inputs and reports.</input>
+    <step>Name each artifact class and the source from which it is derived.</step>
+    <step>Retain exact hashes and dependency pins in the real implementation.</step>
+    <invariant>Do not repair generated output by silently editing it independently.</invariant>
+  </contract>
+  <test id="game.artifacts.example" covers="game.artifacts.boundary">
+    <given>A generated package drifts from source.</given>
+    <when>The reproducibility gate runs.</when>
+    <then>Regenerate from corrected sources or refuse delivery.</then>
+  </test>
+</projection>

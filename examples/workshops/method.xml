@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.method" version="1" status="illustrative">
+  <purpose>Unify operations while preserving provider authority.</purpose>
+  <contract id="workshop.method.boundary">
+    <input>A project model, provider references, permissions and explicit requests.</input>
+    <authority>Original providers own original objects; metadata owns relationships and views.</authority>
+    <step>Read through adapters and expose precise status, provenance and allowed actions.</step>
+    <step>Commit mutations through one authorized, revision-checked boundary.</step>
+    <invariant>A convenient interface never bypasses provider permission or duplicates domain authority.</invariant>
+  </contract>
+  <test id="workshop.method.example" covers="workshop.method.boundary">
+    <given>A provider is unavailable.</given>
+    <when>The workspace refreshes its view.</when>
+    <then>Show an honest unavailable state; do not fabricate current content.</then>
+  </test>
+</projection>

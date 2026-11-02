@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.unreal" version="1" status="planned">
+  <purpose>A future engine adapter, not a second gameplay core.</purpose>
+  <contract id="game.unreal.boundary">
+    <input>The same command and player-projection contracts.</input>
+    <step>Map scene and camera presentation to Unreal APIs.</step>
+    <step>Read engine assets from their separately governed GitLab source.</step>
+    <invariant>Engine animation must not redefine logical time or domain legality.</invariant>
+    <reject>Do not claim a working Unreal pipeline from this pseudocode.</reject>
+  </contract>
+  <test id="game.unreal.example" covers="game.unreal.boundary">
+    <given>A future Unreal integration is under review.</given>
+    <when>The adapter presents a scene.</when>
+    <then>Its observed domain transitions must match the portable core.</then>
+  </test>
+</projection>

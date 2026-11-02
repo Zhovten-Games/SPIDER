@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.schemas" version="1" status="illustrative">
+  <purpose>Define portable data boundaries before host layouts.</purpose>
+  <contract id="game.schemas.boundary">
+    <input>Commands, player data, inspection data, content and save formats.</input>
+    <step>Give each contract a version and explicit compatibility rule.</step>
+    <step>Reject unknown IDs and incompatible shapes.</step>
+    <invariant>Machine-readable structure does not establish literary correctness.</invariant>
+  </contract>
+  <test id="game.schemas.example" covers="game.schemas.boundary">
+    <given>A host sends an unknown command field.</given>
+    <when>The boundary validates its envelope.</when>
+    <then>Accept only the declared version policy or refuse without mutation.</then>
+  </test>
+</projection>
