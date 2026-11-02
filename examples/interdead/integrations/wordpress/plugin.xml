@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.wordpress" version="1" status="illustrative">
+  <purpose>WordPress is a build format, not a publication destination.</purpose>
+  <contract id="game.wordpress.boundary">
+    <input>Verified WASM assets and a declared packaging profile.</input>
+    <step>Build a plugin ZIP with its loader and assets.</step>
+    <step>Verify installation separately from standalone browser checks.</step>
+    <invariant>Producing the ZIP does not imply a public site deployment.</invariant>
+  </contract>
+  <test id="game.wordpress.example" covers="game.wordpress.boundary">
+    <given>A WordPress package is built.</given>
+    <when>The local installation check runs.</when>
+    <then>Report the tested host versions and keep publication a separate action.</then>
+  </test>
+</projection>

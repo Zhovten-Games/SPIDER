@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.host-boundary" version="1" status="illustrative">
+  <purpose>Keep host translation shared without relocating domain rules.</purpose>
+  <contract id="game.host-boundary.boundary">
+    <input>Host input, stable command identity, revision and locale.</input>
+    <step>Normalize host input into the public command envelope.</step>
+    <step>Return structured errors and receipts.</step>
+    <invariant>No adapter writes core fields behind the session boundary.</invariant>
+  </contract>
+  <test id="game.host-boundary.example" covers="game.host-boundary.boundary">
+    <given>Two hosts choose the same action.</given>
+    <when>Each translates its native input.</when>
+    <then>Both reach equivalent core commands.</then>
+  </test>
+</projection>

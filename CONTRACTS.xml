@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="spider.contracts" version="1" status="illustrative">
+  <purpose>Preserve intent, authority and evidence across implementations.</purpose>
+  <contract id="spider.command">
+    <input>Stable command ID, expected revision, payload and source reference.</input>
+    <authority>The domain owns legal transitions; hosts cannot mutate it.</authority>
+    <precondition>Resolve an exact retry before checking a newer revision.</precondition>
+    <step>Refuse a reused ID with different content or an unknown version.</step>
+    <candidate>Calculate effects without modifying committed state.</candidate>
+    <validate>Check invariants, references and authorized scope.</validate>
+    <commit>Commit state, events, receipt and audit together.</commit>
+    <reject>Return a named reason; preserve prior state and acceptance audit.</reject>
+  </contract>
+  <contract id="spider.projection">
+    <input>Validated state, audience, requested locale and source identity.</input>
+    <step>Expose only information and actions permitted for that audience.</step>
+    <invariant id="spider.one-authority">A view cannot become a second domain engine.</invariant>
+    <invariant id="spider.provenance">Derived artifacts retain source and version.</invariant>
+  </contract>
+  <test id="spider.atomic-refusal" covers="spider.command">
+    <given>The final operation of a package violates a reference invariant.</given>
+    <when>The real command boundary receives the complete package.</when>
+    <then>Refuse everything without partial state or acceptance audit.</then>
+  </test>
+  <test id="spider.retry" covers="spider.command">
+    <given>An accepted command and a later unrelated revision.</given>
+    <when>The same actor retries the exact command.</when>
+    <then>Return the original receipt without repeating effects.</then>
+  </test>
+</projection>

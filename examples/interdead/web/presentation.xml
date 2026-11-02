@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.web" version="1" status="illustrative">
+  <purpose>Render a messenger-style game view.</purpose>
+  <contract id="game.web.boundary">
+    <input>Permitted transcript, activity, attention, guide and overlay state.</input>
+    <step>Type text in order; preserve one foreground interaction surface.</step>
+    <step>Center wider text blocks while aligning their text to the left.</step>
+    <step>Send pause and attention commands back to the core.</step>
+    <invariant>Typing animation does not grant knowledge or advance logical rules.</invariant>
+  </contract>
+  <test id="game.web.example" covers="game.web.boundary">
+    <given>The phone is opened mid-message.</given>
+    <when>The host changes attention while typing is in progress.</when>
+    <then>The eventual visible frame agrees with the core perception receipt.</then>
+  </test>
+</projection>

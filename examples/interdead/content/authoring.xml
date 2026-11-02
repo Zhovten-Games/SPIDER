@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.authoring" version="1" status="illustrative">
+  <purpose>Keep literary authority separate from technical definitions.</purpose>
+  <contract id="game.authoring.boundary">
+    <input>Author-owned documents, technical scene cards and localized text keys.</input>
+    <authority>Authors decide narrative meaning; technical snapshots retain source status.</authority>
+    <step>Prepare an attributed import package and review its differences.</step>
+    <step>Compile that snapshot into immutable definitions.</step>
+    <invariant>Google documents do not become executable game code by themselves.</invariant>
+  </contract>
+  <test id="game.authoring.example" covers="game.authoring.boundary">
+    <given>An assistant proposes a new story interpretation.</given>
+    <when>A technical import is prepared.</when>
+    <then>The proposal remains unresolved until an actual authorial decision exists.</then>
+  </test>
+</projection>

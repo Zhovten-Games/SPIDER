@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.delivery" version="1" status="illustrative">
+  <purpose>Separate build format from delivery route.</purpose>
+  <contract id="game.delivery.boundary">
+    <input>Exact source identity, projection, format and destination configuration.</input>
+    <step>Build-only writes an immutable local artifact.</step>
+    <step>Workshop delivery stages a preview for review.</step>
+    <step>Explicit publish delivery can bypass preview only for a configured destination.</step>
+    <reject>An absent final destination keeps publication unavailable.</reject>
+  </contract>
+  <test id="game.delivery.example" covers="game.delivery.boundary">
+    <given>No final destination is configured.</given>
+    <when>An operator opens Build Center.</when>
+    <then>The preview may run; the final publish control remains unavailable.</then>
+  </test>
+</projection>

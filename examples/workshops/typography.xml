@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.typography" version="1" status="illustrative">
+  <purpose>Share readable typographic roles without sharing brand colors.</purpose>
+  <contract id="workshop.typography.boundary">
+    <input>Project palette, native font policy and semantic text roles.</input>
+    <step>Use the EMBO-inspired Segoe UI, Arial, sans-serif stack with native fallbacks.</step>
+    <step>Use body, interface and metadata roles instead of isolated tiny labels.</step>
+    <step>Check Cyrillic, Latin, zoom, narrow screens, keyboard focus and both themes.</step>
+    <invariant>A label must communicate an object, action or state; system fonts need no redistributed binary.</invariant>
+  </contract>
+  <test id="workshop.typography.example" covers="workshop.typography.boundary">
+    <given>A new Workshop adopts the shared roles.</given>
+    <when>Its local palette is retained.</when>
+    <then>The interface stays readable without inheriting another product brand.</then>
+  </test>
+</projection>

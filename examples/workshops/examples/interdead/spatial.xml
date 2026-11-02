@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="workshop.interdead.spatial" version="1" status="planned">
+  <purpose>Preserve spatial identity between authored scene information, browser previews and engine-facing models.</purpose>
+  <contract id="workshop.interdead.spatial.boundary">
+    <input>A versioned scene contract with stable objects, transforms, locations and camera references.</input>
+    <step>Validate scene identities and coordinate conventions before conversion.</step>
+    <step>Project the same model into a Three.js location preview and a future Unreal adapter.</step>
+    <invariant>A spatial preview is a production view, not another gameplay authority.</invariant>
+    <reject>Do not claim completed engine acceptance from a diagram or planned API.</reject>
+  </contract>
+  <test id="workshop.interdead.spatial.example" covers="workshop.interdead.spatial.boundary">
+    <given>An asymmetric scene fixture with identifiable transforms.</given>
+    <when>Future browser and engine adapters convert the fixture.</when>
+    <then>Compare object identity, orientation and placement by declared tolerances.</then>
+  </test>
+</projection>

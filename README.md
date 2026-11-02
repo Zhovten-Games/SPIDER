@@ -1,36 +1,28 @@
 # SPIDER
 
-Signal Preserved in Deep Echo Runtime.
+**Signal Preserved in Deep Echo Runtime** — a public methodology for carrying
+an attributed intention through contracts, execution and consistent projections.
 
-SPIDER defines a reusable method for turning an attributed source into a
-versioned state transition and several consistent projections. A project owns
-its domain rules; SPIDER owns the shared contracts and their provenance.
+Read [the method](METHOD.md), [notation](NOTATION.md) and compact
+[machine-readable contracts](CONTRACTS.xml). English literary pseudocode leaves
+implementation to you. The only executable utility validates this corpus.
 
-Start with [the method](docs/METHOD.md), [projection contract](docs/PROJECTIONS.md)
-and [project inheritance](docs/PROJECT-INHERITANCE.md). The small C++20 library
-provides command context, localization resolution and named check results.
-It contains no InterDead story or gameplay rules.
+| Example | What it explains |
+| --- | --- |
+| [InterDead](examples/interdead/README.md) | Portable core, hosts, provenance, Warden and delivery |
+| [Workshops](examples/workshops/README.md) | Existing services brought into one interface |
+| [InterDead Workshop](examples/workshops/examples/interdead/README.md) | Documents, typed relations, production graph and builds |
+| [EMBO Workshop](examples/workshops/examples/embo/README.md) | A separate commerce workflow using synthetic data |
 
-The [Code Constitution](https://github.com/FOP-Oksana-Dubinetska/code-constitution)
-is pinned in `.code-constitution`. [PROFILE](governance/PROFILE.md) and
-[development rules](governance/legislation/DEVELOPMENT-CXX.md) describe the local
-implementation. Project overrides, including a different language or build
-system, are normal: record their scope, source, reason and evidence.
+We derive from the pinned [Code Constitution](https://github.com/FOP-Oksana-Dubinetska/code-constitution)
+with a [candidate profile](governance/PROFILE.md). The separate
+[Repository Licensing Policy](https://github.com/FOP-Oksana-Dubinetska/repository-licensing-policy)
+informs our explicit [licensing map](LICENSE.md). No formal ratification is implied.
 
-```sh
-git clone --recurse-submodules https://github.com/Zhovten-Games/SPIDER.git
-cd SPIDER
-make check
-```
+Run `make check` with Python 3.10+ and Make. It checks structure/references, not
+product acceptance. Read [publication scope](PUBLICATION.md) before reuse.
+Private product sources are not needed to understand the examples.
 
-Verified bootstrap toolchain: GCC 13.3.0, GNU Make 4.3, Python 3.12.14 on Linux.
-The library needs C++20; the check command also needs Python 3.10 or newer.
-Build outputs stay in `build/`. CMake is an optional integration definition,
-not a separately verified toolchain in this bootstrap.
-
-The constitutional profile is a published candidate. Technical checks implement
-the requested foundation; they do not claim formal ratification or complete
-constitutional conformity. Adoption requires the separate human record described
-in the upstream Constitution. New domain projects must make their own profile.
-
-First consumer: [InterDead](https://github.com/Zhovten-Games/InterDead).
+Consumers of the former C++ bootstrap retain immutable commit
+`3c67103c1456f5b1dd5ce88204be658d0bbce3bd`; its MIT implementation remains
+in Git history. This edition changes no consumer's dependency pin.

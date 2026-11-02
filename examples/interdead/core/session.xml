@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.session" version="1" status="illustrative">
+  <purpose>One authoritative, portable game state.</purpose>
+  <contract id="game.session.boundary">
+    <input>Command context, immutable definitions and injected logical time.</input>
+    <authority>Only the session changes state, knowledge, inventory and stress.</authority>
+    <step>Build a candidate transition; validate before committing.</step>
+    <step>Advance memory and stress recovery independently; render their overlap without restarting either lifetime.</step>
+    <invariant>Phone attention changes perceived context, not whether the world continues.</invariant>
+    <reject>Preserve state and events on illegal or stale commands.</reject>
+  </contract>
+  <test id="game.session.example" covers="game.session.boundary">
+    <given>A player opens a phone during speech.</given>
+    <when>The session receives attention and time commands.</when>
+    <then>Perception reflects the actual interval; projections cannot grant missed knowledge.</then>
+  </test>
+</projection>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.replay" version="1" status="illustrative">
+  <purpose>Replay deterministic commands without player layout.</purpose>
+  <contract id="game.replay.boundary">
+    <input>The same definitions, seed and ordered command stream.</input>
+    <step>Drive the real session through its public boundary.</step>
+    <step>Record semantic frames and failures for comparison.</step>
+    <invariant>A scripted host is not an alternative simulation.</invariant>
+  </contract>
+  <test id="game.replay.example" covers="game.replay.boundary">
+    <given>A recorded failure is reproduced.</given>
+    <when>The headless host replays the same versioned inputs.</when>
+    <then>The first divergent semantic value is reported by name.</then>
+  </test>
+</projection>

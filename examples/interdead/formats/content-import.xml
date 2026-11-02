@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: MIT -->
+<projection id="game.import" version="1" status="illustrative">
+  <purpose>Turn attributed authoring packages into deterministic definitions.</purpose>
+  <contract id="game.import.boundary">
+    <input>A source snapshot, scene cards, text keys, locales and declared versions.</input>
+    <step>Resolve every ID, guard, transition and localized text reference.</step>
+    <step>Preserve source digest, compiler identity and editorial status.</step>
+    <commit>Produce one immutable content package.</commit>
+    <reject>Block release when authorial choices remain unresolved or content is a fixture.</reject>
+  </contract>
+  <test id="game.import.example" covers="game.import.boundary">
+    <given>A scene references an absent localized key.</given>
+    <when>The importer validates the package.</when>
+    <then>It reports the named missing key and emits no release package.</then>
+  </test>
+</projection>
