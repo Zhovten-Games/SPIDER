@@ -44,12 +44,22 @@
     "examples/workshops/examples/interdead/workspace.xml",
     "examples/workshops/method.xml",
     "examples/workshops/typography.xml",
+    "governance/LICENSE.md",
     "governance/PROFILE.md",
+    "governance/README.md",
+    "governance/adoption-2026-11-07.json",
+    "governance/decisions/2026-11-07-adoption.md",
+    "governance/ecosystem.json",
+    "governance/legislation/ECOSYSTEM.md",
     "governance/legislation/METHODOLOGY.md",
     "manifest/artifacts.json",
     "manifest/dependencies.json",
     "manifest/publication.json",
-    "tools/check-methodology.py"
+    "tools/check-methodology.py",
+    "tools/warden.mjs",
+    "vendor/code-constitution/CONSTITUTION_CODE-ru.md",
+    "vendor/code-constitution/LICENSE.md",
+    "vendor/code-constitution/SOURCE.json"
   ],
   "gitlinks": {
     ".code-constitution": "220dc9c286ae06f8b6ed60cdda75112eed0408ed",

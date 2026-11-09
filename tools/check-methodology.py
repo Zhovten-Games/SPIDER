@@ -22,7 +22,7 @@ def require(condition, message):
 def check(root):
     manifest = json.loads((root / 'manifest/publication.json').read_text())
     actual = {str(p.relative_to(root)) for p in root.rglob('*') if p.is_file()
-              and not any(part == '.git' or part in PINS for part in p.relative_to(root).parts)}
+              and not any(part in {'.git', '.warden'} or part in PINS for part in p.relative_to(root).parts)}
     require(set(manifest['paths']) == actual, 'publication path inventory differs')
     require(manifest['gitlinks'] == PINS, 'unexpected policy pin')
     ids, refs, xml_count = {}, [], 0
@@ -32,7 +32,7 @@ def check(root):
         # The validator necessarily contains its own detection vocabulary.
         if name != 'tools/check-methodology.py':
             require(not SECRET.search(text), f'publication boundary: {name}')
-        require(p.suffix not in {'.cpp', '.hpp', '.ts', '.tsx', '.mjs', '.wasm'}, f'implementation code: {name}')
+        require(name == 'tools/warden.mjs' or p.suffix not in {'.cpp', '.hpp', '.ts', '.tsx', '.mjs', '.wasm'}, f'implementation code: {name}')
         if p.suffix == '.json':
             json.loads(text)
         if p.suffix == '.xml':

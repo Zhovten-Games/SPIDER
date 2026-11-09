@@ -1,6 +1,6 @@
 # Methodology development rules
 
-`spider-methodology-0.2.0-candidate`, derived from the pinned Constitution.
+`spider-methodology-0.3.0-operative`, derived from the pinned Constitution.
 
 | Rule | Scope and verification |
 | --- | --- |
@@ -16,3 +16,7 @@
 This edition replaces the bootstrap C++ stack rule with XML/Markdown and a
 Python-standard-library verifier. Consumer stacks/pins are unchanged. Universal
 typography amendments require separate consideration.
+
+## Verification tooling scope
+
+`tools/warden.mjs` is the explicitly allowed repository verification orchestrator. It supplies no product implementation. `.warden/` contains generated local evidence and is excluded from the reviewed publication path inventory. Other executable product/source exclusions remain enforced by check-methodology.py.
