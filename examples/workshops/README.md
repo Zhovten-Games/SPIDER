@@ -7,7 +7,7 @@ operation, and see whether it actually completed.
 
 The owner-supplied Halloween 2026 overview, **Custom Operations Workspaces —
 From Internal Production to Client Infrastructure**, grounds this summary. It
-identifies two October implementations behind the IRON CREED service. The
+identifies two October implementations behind the IRONCREED service. The
 reusable result is a dedicated operational application around existing
 infrastructure, with identity, authority, recovery and verifiable outcomes.
 
