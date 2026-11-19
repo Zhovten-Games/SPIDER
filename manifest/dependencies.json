@@ -2,11 +2,11 @@
   "schema_version": 1,
   "constitution": {
     "repository": "FOP-Oksana-Dubinetska/code-constitution",
-    "commit": "220dc9c286ae06f8b6ed60cdda75112eed0408ed"
+    "commit": "7ee225ba60dbade07b4a9941b090e5597d02cd89"
   },
   "licensing_policy": {
     "repository": "FOP-Oksana-Dubinetska/repository-licensing-policy",
-    "commit": "6e4c2627717c079827ed4aa9044a5346b3ea3ddb"
+    "commit": "ab9cd01a05aa314027d590c9db9284d35d247deb"
   },
   "interdead": {
     "repository": "Zhovten-Games/InterDead",

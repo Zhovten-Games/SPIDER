@@ -9,8 +9,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 TAGS = set('projection purpose contract input authority precondition step candidate validate commit reject invariant test given when then assert ref'.split())
-PINS = {'.code-constitution': '220dc9c286ae06f8b6ed60cdda75112eed0408ed',
-        '.licensing-policy': '6e4c2627717c079827ed4aa9044a5346b3ea3ddb'}
+PINS = {'.code-constitution': '7ee225ba60dbade07b4a9941b090e5597d02cd89',
+        '.licensing-policy': 'ab9cd01a05aa314027d590c9db9284d35d247deb'}
 SECRET = re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{30,}|AIza[A-Za-z0-9_-]{30,}|https?://(?:docs|drive)\.google\.com/[^\s]+', re.I)
 
 

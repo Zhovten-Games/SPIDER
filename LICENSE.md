@@ -2,7 +2,7 @@
 
 This repository applies the [Repository Licensing Policy](https://github.com/FOP-Oksana-Dubinetska/repository-licensing-policy)
 through `.licensing-policy`, pinned at
-`6e4c2627717c079827ed4aa9044a5346b3ea3ddb`. The submodule is incorporated
+`ab9cd01a05aa314027d590c9db9284d35d247deb`. The submodule is incorporated
 by reference; this declaration applies the following scoped map.
 
 | Scope | License |

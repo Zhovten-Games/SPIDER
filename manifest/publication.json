@@ -47,13 +47,23 @@
     "governance/LICENSE.md",
     "governance/PROFILE.md",
     "governance/README.md",
+    "governance/SOURCES.json",
     "governance/adoption-2026-11-07.json",
     "governance/adoption-2026-11-10.json",
+    "governance/adoption-2026-11-19.json",
     "governance/decisions/2026-11-07-adoption.md",
     "governance/decisions/2026-11-10-editorial-profile.md",
+    "governance/decisions/2026-11-19-source-references.md",
     "governance/ecosystem.json",
     "governance/legislation/ECOSYSTEM.md",
     "governance/legislation/METHODOLOGY.md",
+    "governance/locales/uk/LICENSE.md",
+    "governance/locales/uk/PROFILE.md",
+    "governance/locales/uk/README.md",
+    "governance/locales/uk/REPOSITORY-LICENSE.md",
+    "governance/locales/uk/SOURCE.json",
+    "governance/locales/uk/legislation/ECOSYSTEM.md",
+    "governance/locales/uk/legislation/METHODOLOGY.md",
     "locales/README.md",
     "locales/be/METHOD.md",
     "locales/be/NOTATION.md",
@@ -68,14 +78,10 @@
     "manifest/dependencies.json",
     "manifest/publication.json",
     "tools/check-methodology.py",
-    "tools/warden.mjs",
-    "vendor/code-constitution/CONSTITUTION_CODE-be.md",
-    "vendor/code-constitution/CONSTITUTION_CODE-ru.md",
-    "vendor/code-constitution/LICENSE.md",
-    "vendor/code-constitution/SOURCE.json"
+    "tools/warden.mjs"
   ],
   "gitlinks": {
-    ".code-constitution": "220dc9c286ae06f8b6ed60cdda75112eed0408ed",
-    ".licensing-policy": "6e4c2627717c079827ed4aa9044a5346b3ea3ddb"
+    ".code-constitution": "7ee225ba60dbade07b4a9941b090e5597d02cd89",
+    ".licensing-policy": "ab9cd01a05aa314027d590c9db9284d35d247deb"
   }
 }
