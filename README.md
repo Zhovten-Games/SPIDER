@@ -58,10 +58,6 @@
 
 [Governance](governance/README.md)
 
-
-<details open>
-<summary>English</summary>
-
 **Signal Preserved in Deep Echo Runtime** — a public methodology for carrying
 an attributed intention through contracts, execution and consistent projections.
 
@@ -89,6 +85,26 @@ Consumers of the former C++ bootstrap retain immutable commit
 `3c67103c1456f5b1dd5ce88204be658d0bbce3bd`; its MIT implementation remains
 in Git history. This edition changes no consumer's dependency pin.
 
+<details>
+<summary>Русский</summary>
+
+**Signal Preserved in Deep Echo Runtime** — публичная методология сохранения приписанного источнику намерения в контрактах, исполнении и согласованных проекциях.
+
+Начните с [метода](locales/ru/METHOD.md), [нотации](locales/ru/NOTATION.md) и компактных [машиночитаемых контрактов](CONTRACTS.xml). Англоязычный литературный псевдокод оставляет конкретную реализацию за потребителем. Исполняемые инструменты проверяют структуру корпуса.
+
+| Пример | Предмет объяснения |
+| --- | --- |
+| [InterDead](examples/interdead/README.md) | Переносное ядро, адаптеры, происхождение, Warden и поставка |
+| [Мастерские](examples/workshops/README.md) | Объединение существующих сервисов в одном интерфейсе |
+| [InterDead Workshop](examples/workshops/examples/interdead/README.md) | Документы, типизированные связи, производственный граф и сборки |
+| [EMBO Workshop](examples/workshops/examples/embo/README.md) | Отдельный коммерческий процесс с синтетическими данными |
+
+Метод опирается на закреплённую [Конституцию кода](https://github.com/FOP-Oksana-Dubinetska/code-constitution) и [действующий профиль](governance/PROFILE.md). [Политика лицензирования репозиториев](https://github.com/FOP-Oksana-Dubinetska/repository-licensing-policy) задаёт основу явной [лицензионной карты](LICENSE.md). Инженерное принятие имеет собственную записанную область.
+
+Проверка: `make check` с Python 3.10+ и Node 24.19+, либо `node tools/warden.mjs`. Она охватывает перечень публичных файлов, XML, идентификаторы, ссылки и сценарии отказа. Приёмка продукта и оценка литературного содержания имеют отдельные доказательства. Перед использованием прочитайте [границу публикации](locales/ru/PUBLICATION.md).
+
+Потребители прежней C++-основы сохраняют неизменный коммит `3c67103c1456f5b1dd5ce88204be658d0bbce3bd`; его MIT-реализация доступна в истории Git. Эта редакция сохраняет закреплённые зависимости потребителей.
+
 </details>
 
 <details>
@@ -114,23 +130,23 @@ in Git history. This edition changes no consumer's dependency pin.
 </details>
 
 <details>
-<summary>Русский</summary>
+<summary>Беларуская</summary>
 
-**Signal Preserved in Deep Echo Runtime** — публичная методология сохранения приписанного источнику намерения в контрактах, исполнении и согласованных проекциях.
+**Signal Preserved in Deep Echo Runtime** — публічная метадалогія пераносу атрыбутаванага намеру праз кантракты, выкананне і ўзгодненыя праекцыі.
 
-Начните с [метода](locales/ru/METHOD.md), [нотации](locales/ru/NOTATION.md) и компактных [машиночитаемых контрактов](CONTRACTS.xml). Англоязычный литературный псевдокод оставляет конкретную реализацию за потребителем. Исполняемые инструменты проверяют структуру корпуса.
+Прачытайце [метад](locales/be/METHOD.md), [натацыю](locales/be/NOTATION.md) і кароткія [машыначытэльныя кантракты](CONTRACTS.xml). Англійскі літаратурны псеўдакод пакідае рэалізацыю вам. Адзіная выканальная ўтыліта правярае гэты корпус.
 
-| Пример | Предмет объяснения |
+| Прыклад | Што ён тлумачыць |
 | --- | --- |
-| [InterDead](examples/interdead/README.md) | Переносное ядро, адаптеры, происхождение, Warden и поставка |
-| [Мастерские](examples/workshops/README.md) | Объединение существующих сервисов в одном интерфейсе |
-| [InterDead Workshop](examples/workshops/examples/interdead/README.md) | Документы, типизированные связи, производственный граф и сборки |
-| [EMBO Workshop](examples/workshops/examples/embo/README.md) | Отдельный коммерческий процесс с синтетическими данными |
+| [InterDead](examples/interdead/README.md) | Пераносімае ядро, хосты, паходжанне, Warden і пастаўку |
+| [Workshops](examples/workshops/README.md) | Аб'яднанне існых сэрвісаў у адным інтэрфейсе |
+| [InterDead Workshop](examples/workshops/examples/interdead/README.md) | Дакументы, тыпізаваныя адносіны, вытворчы граф і зборкі |
+| [EMBO Workshop](examples/workshops/examples/embo/README.md) | Асобны працэс камерцыі на сінтэтычных даных |
 
-Метод опирается на закреплённую [Конституцию кода](https://github.com/FOP-Oksana-Dubinetska/code-constitution) и [действующий профиль](governance/PROFILE.md). [Политика лицензирования репозиториев](https://github.com/FOP-Oksana-Dubinetska/repository-licensing-policy) задаёт основу явной [лицензионной карты](LICENSE.md). Инженерное принятие имеет собственную записанную область.
+Мы зыходзім з замацаванай [Канстытуцыі кода](https://github.com/FOP-Oksana-Dubinetska/code-constitution) з [прынятым інжынерным профілем](governance/PROFILE.md). Асобная [Палітыка ліцэнзавання рэпазіторыяў](https://github.com/FOP-Oksana-Dubinetska/repository-licensing-policy) вызначае аснову нашай яўнай [карты ліцэнзій](LICENSE.md). Зафіксаванае інжынернае прыняцце мае выразна акрэсленую вобласць дзеяння.
 
-Проверка: `make check` с Python 3.10+ и Node 24.19+, либо `node tools/warden.mjs`. Она охватывает перечень публичных файлов, XML, идентификаторы, ссылки и сценарии отказа. Приёмка продукта и оценка литературного содержания имеют отдельные доказательства. Перед использованием прочитайте [границу публикации](locales/ru/PUBLICATION.md).
+Запусціце `make check` з Python 3.10+, Node 24.19+ і Make. Каманда правярае структуру і спасылкі. Прыняцце прадукту патрабуе асобнай праверкі. Перад паўторным выкарыстаннем прачытайце [межы публікацыі](locales/be/PUBLICATION.md). Прыклады можна зразумець без прыватных зыходнікаў прадуктаў.
 
-Потребители прежней C++-основы сохраняют неизменный коммит `3c67103c1456f5b1dd5ce88204be658d0bbce3bd`; его MIT-реализация доступна в истории Git. Эта редакция сохраняет закреплённые зависимости потребителей.
+Спажыўцы ранейшай пачатковай рэалізацыі C++ захоўваюць нязменны каміт `3c67103c1456f5b1dd5ce88204be658d0bbce3bd`; яе рэалізацыя MIT застаецца ў гісторыі Git. Гэтая рэдакцыя захоўвае замацаваныя рэвізіі залежнасцяў усіх спажыўцоў.
 
 </details>

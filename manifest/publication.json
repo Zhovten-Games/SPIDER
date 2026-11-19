@@ -55,6 +55,9 @@
     "governance/legislation/ECOSYSTEM.md",
     "governance/legislation/METHODOLOGY.md",
     "locales/README.md",
+    "locales/be/METHOD.md",
+    "locales/be/NOTATION.md",
+    "locales/be/PUBLICATION.md",
     "locales/ru/METHOD.md",
     "locales/ru/NOTATION.md",
     "locales/ru/PUBLICATION.md",
@@ -66,6 +69,7 @@
     "manifest/publication.json",
     "tools/check-methodology.py",
     "tools/warden.mjs",
+    "vendor/code-constitution/CONSTITUTION_CODE-be.md",
     "vendor/code-constitution/CONSTITUTION_CODE-ru.md",
     "vendor/code-constitution/LICENSE.md",
     "vendor/code-constitution/SOURCE.json"
